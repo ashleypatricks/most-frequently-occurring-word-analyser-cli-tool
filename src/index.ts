@@ -11,9 +11,9 @@ import { formatAndPrintReport, getArgs, wordCounter, processTextFromFiles } from
 
     const textFromDirectoryFiles = await processTextFromFiles(directoryPath);
 
-    const wordAanalysisResult = wordCounter(textFromDirectoryFiles, +numberOfMostFrequentlyOccurringWords);
+    const wordAnalysisResult = wordCounter(textFromDirectoryFiles, +numberOfMostFrequentlyOccurringWords);
 
-    formatAndPrintReport(wordAanalysisResult);
+    formatAndPrintReport(wordAnalysisResult);
   } catch (e) {
     console.log(e);
   }

@@ -42,7 +42,7 @@ const processTextFromFiles = async (directoryPath: string) => {
 const removeCommonWords = (wordsMatchedArray: RegExpMatchArray | null) =>
   wordsMatchedArray?.filter((wordMatched) => commonWords.every((commonWord) => !wordMatched.toLowerCase().includes(commonWord)));
 
-const removewordsWithNonAlphabeticCharacters = (wordsMatched: string[] | undefined) => wordsMatched?.filter((word) => word.match(/^[a-zA-Z]+$/));
+const removeWordsWithNonAlphabeticCharacters = (wordsMatched: string[] | undefined) => wordsMatched?.filter((word) => word.match(/^[a-zA-Z]+$/));
 
 const removedWordsWithLessThanThreeCharacters = (wordsMatched: string[] | undefined) => wordsMatched?.filter((word) => word.length >= 3);
 
@@ -53,7 +53,7 @@ const wordCounter = (words: string, numberOfWords: number) => {
 
   const wordsProcessedWithoutCommonWords = removeCommonWords(initialWordsProcessed);
 
-  const wordsProcessedWithoutNonAlphaCharacters = removewordsWithNonAlphabeticCharacters(wordsProcessedWithoutCommonWords);
+  const wordsProcessedWithoutNonAlphaCharacters = removeWordsWithNonAlphabeticCharacters(wordsProcessedWithoutCommonWords);
 
   const wordsProcessedWithMoreThanThreeCharacters = removedWordsWithLessThanThreeCharacters(wordsProcessedWithoutNonAlphaCharacters);
 
