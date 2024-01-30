@@ -22,7 +22,7 @@ In the project directory, you can run:
 
 `npm run start:app text-files <number>`
 
-The report will be printed in the console in the foree format:
+The report will be printed in the console in the following format:
 
 `Top <number> words in <directory>`:
 
