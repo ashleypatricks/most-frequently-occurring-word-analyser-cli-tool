@@ -22,6 +22,8 @@ In the project directory, you can run:
 
 `npm run start:app text-files <number>`
 
+`Example: npm run start:app text-files 7`
+
 The report will be printed in the console in the following format:
 
 `Top <number> words in <directory>`:
